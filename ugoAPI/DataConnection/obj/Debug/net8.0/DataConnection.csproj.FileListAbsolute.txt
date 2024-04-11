@@ -1,0 +1,14 @@
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\bin\Debug\net8.0\DataConnection.deps.json
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\bin\Debug\net8.0\DataConnection.runtimeconfig.json
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\bin\Debug\net8.0\DataConnection.dll
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\bin\Debug\net8.0\DataConnection.pdb
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.csproj.AssemblyReference.cache
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.AssemblyInfoInputs.cache
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.AssemblyInfo.cs
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.csproj.CoreCompileInputs.cache
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.dll
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\refint\DataConnection.dll
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.pdb
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\DataConnection.genruntimeconfig.cache
+C:\Desarrollo\GotaOceano\Project\ugoAPI\DataConnection\obj\Debug\net8.0\ref\DataConnection.dll

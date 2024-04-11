@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ugoAPI", "ugoAPI\ugoAPI.csproj", "{3959F769-5CF8-4801-8C11-3DAC201D355C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{21DA2416-1277-4155-B5C1-ABFF60B60D16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{83D7C062-36F1-4C5C-A436-25B50C2C9158}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{BB735980-8A1F-43D1-9E66-35501CBD6A5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataConnection", "DataConnection\DataConnection.csproj", "{D00CB507-0D27-467D-A1AB-B3864EE41AB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3959F769-5CF8-4801-8C11-3DAC201D355C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3959F769-5CF8-4801-8C11-3DAC201D355C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3959F769-5CF8-4801-8C11-3DAC201D355C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3959F769-5CF8-4801-8C11-3DAC201D355C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00CB507-0D27-467D-A1AB-B3864EE41AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00CB507-0D27-467D-A1AB-B3864EE41AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00CB507-0D27-467D-A1AB-B3864EE41AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00CB507-0D27-467D-A1AB-B3864EE41AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3959F769-5CF8-4801-8C11-3DAC201D355C} = {BB735980-8A1F-43D1-9E66-35501CBD6A5D}
+		{83D7C062-36F1-4C5C-A436-25B50C2C9158} = {21DA2416-1277-4155-B5C1-ABFF60B60D16}
+		{D00CB507-0D27-467D-A1AB-B3864EE41AB3} = {83D7C062-36F1-4C5C-A436-25B50C2C9158}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10C6526A-E900-490B-B20C-7BDBB654E07C}
+	EndGlobalSection
+EndGlobal
