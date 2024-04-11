@@ -11,7 +11,9 @@ node_modules/
 bower_components/
 coverage/
 dist/
-public/
+
+ugoAPI/.vs/
+
 tmp/
 *.log
 *.tmp
