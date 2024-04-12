@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desarrollo\\GotaOceano\\Project\\ugoAPI\\DataConnection\\DataConnection.csproj": {}
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj": {}
   },
   "projects": {
-    "C:\\Desarrollo\\GotaOceano\\Project\\ugoAPI\\DataConnection\\DataConnection.csproj": {
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\GotaOceano\\Project\\ugoAPI\\DataConnection\\DataConnection.csproj",
+        "projectUniqueName": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj",
         "projectName": "DataConnection",
-        "projectPath": "C:\\Desarrollo\\GotaOceano\\Project\\ugoAPI\\DataConnection\\DataConnection.csproj",
+        "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj",
         "packagesPath": "C:\\Users\\luiso\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\GotaOceano\\Project\\ugoAPI\\DataConnection\\obj\\",
+        "outputPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luiso\\AppData\\Roaming\\NuGet\\NuGet.Config",

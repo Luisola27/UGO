@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2NncmbkYGsoiIZ25SoM7hYGmzbYwH7HUMyPBDKfodeusaMQLc2nOLBP98ok5TmndfEKN2F33ulQlclGz9L8Kkg==",
+  "dgSpecHash": "IqPnOprP8uXLbjgDE3I5WQ4NIS5MxDWMUQ8Zror6zJ+Y2l7gZun+KmKxTs46DznIZbRGAAkgc9qYNQUeNhsPbg==",
   "success": true,
-  "projectFilePath": "C:\\Desarrollo\\GotaOceano\\Project\\ugoAPI\\ugoAPI\\ugoAPI.csproj",
+  "projectFilePath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugoAPI\\ugoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luiso\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\luiso\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

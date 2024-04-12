@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ugoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0733fbc9ed044beab7f2f5e4f2ec270379c08107")]
 [assembly: System.Reflection.AssemblyProductAttribute("ugoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ugoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
