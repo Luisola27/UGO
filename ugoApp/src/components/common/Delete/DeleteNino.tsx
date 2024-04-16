@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Grid,
   Modal,
   ModalHeader,
   ModalContent,
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export default function DeleteNino({ ninoId, nameNino }: Props) {
-  const {setNinos} = useNinos();
+  const { setNinos } = useNinos();
   const [open, setOpen] = useState(false);
 
   const handleSubmit = async () => {
@@ -26,29 +27,33 @@ export default function DeleteNino({ ninoId, nameNino }: Props) {
   };
 
   return (
-    <Modal
-      size="tiny"
-      onOpen={() => setOpen(true)}
-      onClose={() => setOpen(false)}
-      open={open}
-      trigger={
-        <Button icon floated="right">
-          <Icon color="red" name="trash alternate" />
-        </Button>
-      }
-    >
-      <ModalHeader>Eliminar Niño</ModalHeader>
-      <ModalContent>
-        <p>Esta seguro/a que desea borrar a {nameNino}</p>
-      </ModalContent>
-      <ModalActions>
-        <Button negative onClick={() => setOpen(false)}>
-          No
-        </Button>
-        <Button positive type="submit" onClick={() => handleSubmit()}>
-          Yes
-        </Button>
-      </ModalActions>
-    </Modal>
+    <Grid>
+      <Grid.Column>
+        <Modal
+          size="tiny"
+          onOpen={() => setOpen(true)}
+          onClose={() => setOpen(false)}
+          open={open}
+          trigger={
+            <Button icon floated="right" style={{ backgroundColor: 'transparent' }}>
+              <Icon color="red" name="trash alternate" />
+            </Button>
+          }
+        >
+          <ModalHeader>Eliminar Niño</ModalHeader>
+          <ModalContent>
+            <p>Esta seguro/a que desea borrar a {nameNino}</p>
+          </ModalContent>
+          <ModalActions>
+            <Button negative onClick={() => setOpen(false)}>
+              No
+            </Button>
+            <Button positive type="submit" onClick={() => handleSubmit()}>
+              Yes
+            </Button>
+          </ModalActions>
+        </Modal>
+      </Grid.Column>
+    </Grid>
   );
 }

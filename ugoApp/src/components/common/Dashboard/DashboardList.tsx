@@ -27,7 +27,7 @@ export default function DashboardList() {
   };
 
   return (
-    <Grid>
+    <Grid columns={2}>
       <Grid.Column width='13'>
       <Segment>
       <Item.Group color="blue" divided>
@@ -41,10 +41,12 @@ export default function DashboardList() {
                 <div>{nino.gender == 0 ? "Niño" : "Niña"}</div>
               </Item.Description>
               <Item.Extra>
+              <div style={{ position: 'absolute', bottom: 100, right: 20 }}>
+                <DeleteNino ninoId={nino.ninoId} nameNino={nino.name}/>
+                </ div>
                 <Button color="orange" floated="right" onClick={() => handleUpdate(nino)}>
                   Actualizar Niño
                 </Button>
-                <DeleteNino ninoId={nino.ninoId} nameNino={nino.name}/>
                 {nino.sponsor === null ? (
                   <ModalAddSponsor nino={nino} />
                 ) : (
