@@ -1,28 +1,51 @@
 import React from "react";
-import { SaveNino, UpdateSponsor } from "../../services/ninoService";
+import {
+  DeleteNino,
+  GetNinos,
+  SaveNino,
+  UpdateNino,
+  UpdateSponsor,
+} from "../../services/ninoService";
 import { notification } from "../../components/common/Toast/Toast";
+import { Nino } from "../../types/nino";
+
+export async function getNinos(
+  setNinos: React.Dispatch<React.SetStateAction<Array<Nino>>>
+) {
+  await GetNinos().then((response: any) => {
+    if (Object.keys(response).length > 0) {
+      if (response.data !== undefined && response.data.errors === undefined) {
+        setNinos(response.data.data.getNinos);
+      }
+    }
+  });
+}
 
 export async function saveNino(
   name: string,
   identification: string,
   age: number,
-  gender: number
+  gender: number,
+  sponsor?: string | null | undefined,
+  gift?: number
 ) {
-  await SaveNino(name, identification, age, gender).then((response: any) => {
-    if (response.data !== undefined && response.data.errors === undefined) {
-      notification(
-        "El niño ha sido creado con exito",
-        "Niño creado con exito",
-        "success"
-      );
-    } else {
-      notification(
-        `No se pudo crear el niño: ${name} `,
-        "Error al crear el niño",
-        "error"
-      );
+  await SaveNino(name, identification, age, gender, sponsor, gift).then(
+    (response: any) => {
+      if (response.data !== undefined && response.data.errors === undefined) {
+        notification(
+          "El niño ha sido creado con exito",
+          "Niño creado con exito",
+          "success"
+        );
+      } else {
+        notification(
+          `No se pudo crear el niño: ${name} `,
+          "Error al crear el niño",
+          "error"
+        );
+      }
     }
-  });
+  );
 }
 
 export async function updateSponsor(ninoId: number, sponsor: string) {
@@ -41,4 +64,56 @@ export async function updateSponsor(ninoId: number, sponsor: string) {
       );
     }
   });
+}
+
+export async function updateNino(
+  ninoId: number,
+  name?: string,
+  identification?: string,
+  age?: number,
+  gender?: number,
+  sponsor?: string | null | undefined,
+  gift?: number
+) {
+  await UpdateNino(
+    ninoId,
+    name,
+    identification,
+    age,
+    gender,
+    sponsor,
+    gift
+  ).then((response: any) => {
+    if (response.data !== undefined && response.data.errors === undefined) {
+      notification(
+        "Se ha actualizado correctamente",
+        `El niño: ${name} actualizado`,
+        "success"
+      );
+    } else {
+      notification(
+        `No se pudo actualizar a ${name}`,
+        "Valide todos los campos",
+        "error"
+      );
+    }
+  });
+}
+
+export async function deleteNino(ninoId:number, name: string) {
+  await DeleteNino(ninoId).then((response: any) => {
+    if(response.data !== undefined && response.data.errors === undefined) {
+      notification(
+        "Se ha eliminado el nino",
+        `El niño ${name} se ha eliminado`,
+        "success"
+      );
+    } else {
+      notification(
+        "No se ha podido eliminar el niño",
+        "Intenta nuevamente",
+        "error"
+      )
+    }
+  })  
 }

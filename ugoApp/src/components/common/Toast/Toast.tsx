@@ -9,7 +9,6 @@ export function notification(descrip: string, message: string, type: any) {
         type: type,
         time: 1000,
       },
-      () => console.log("Toast")
     );
   }, 1000);
 }

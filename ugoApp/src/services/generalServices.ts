@@ -1,4 +1,4 @@
-import axios, { Axios, AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 import { getWebSiteAPI } from "../configuration/config";
 import { HEADERS } from "../constants/configConstants";
 
