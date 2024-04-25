@@ -9,13 +9,15 @@ import {
   Form,
 } from "semantic-ui-react";
 import { Nino } from "../../../types/nino";
-import { updateSponsor } from "../../../helpers/nino/ninoHook";
+import { getNinos, updateSponsor } from "../../../helpers/nino/ninoHook";
+import { useNinos } from "../../../helpers/context/NinosContext";
 
 interface Props {
     nino:Nino;
 }
 
 export default function ModalAddSponsor({ nino }:Props) {
+  const {setNinos} = useNinos();
   const [open, setOpen] = useState(false);
   const [sponsor, setSponsor] = useState("");
 
@@ -25,12 +27,13 @@ export default function ModalAddSponsor({ nino }:Props) {
     setSponsor(event.target.value);
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setOpen(false);
-    updateSponsor(nino.ninoId, sponsor).then(() => {
+    await updateSponsor(nino.ninoId, sponsor).then(() => {
     });
     setSponsor("");
+    getNinos(setNinos)
   };
 
   return (

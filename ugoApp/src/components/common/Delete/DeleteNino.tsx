@@ -35,8 +35,10 @@ export default function DeleteNino({ ninoId, nameNino }: Props) {
           onClose={() => setOpen(false)}
           open={open}
           trigger={
-            <Button icon floated="right" style={{ backgroundColor: 'transparent' }}>
-              <Icon color="red" name="trash alternate" />
+            <Button icon floated="right" size="large" style={{ backgroundColor: 'transparent' }}>
+              <Icon color="red" name="trash alternate" 
+              
+              />
             </Button>
           }
         >

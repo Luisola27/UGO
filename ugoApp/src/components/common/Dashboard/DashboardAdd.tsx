@@ -11,13 +11,18 @@ const InitialFormData: Nino = {
   identification: "",
   age: 0,
   gender: 0,
-  sponsor: "",
+  sponsor: "" || null,
   gift: 0,
 };
 
 export default function DashboardAdd() {
   const { setNinos } = useNinos();
   const [formData, setFormData] = useState<Nino>(InitialFormData);
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({
+    name: false,
+    age: false,
+  });
   const navigate = useNavigate();
   const location = useLocation();
   const selectedNino = location.state?.nino || null;
@@ -25,8 +30,8 @@ export default function DashboardAdd() {
   useEffect(() => {
     if (selectedNino) {
       setFormData(selectedNino);
-    }else{
-      setFormData(InitialFormData)
+    } else {
+      setFormData(InitialFormData);
     }
   }, [selectedNino]);
 
@@ -44,10 +49,33 @@ export default function DashboardAdd() {
       ...prevState,
       [name]: value,
     }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: false,
+    }));
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    setSubmitted(true);
+
+    let newErrors = {
+      name: false,
+      age: false,
+    };
+
+    if (formData.name.trim() === "") {
+      newErrors = {
+        ...newErrors,
+        name: true,
+      };
+    }
+
+    if (Object.values(newErrors).some((error) => error)) {
+      setErrors(newErrors);
+      return;
+    }
 
     if (selectedNino === undefined || selectedNino === null) {
       await saveNino(
@@ -78,19 +106,25 @@ export default function DashboardAdd() {
     <Segment>
       <Form onSubmit={handleSubmit}>
         <Form.Input
+          error={
+            (submitted || formData.name.trim() !== "") && errors.name
+              ? { content: "Por favor ingresa el nombre", pointing: "below" }
+              : null
+          }
+          required
           label="Name"
           placeholder="Name"
           name="name"
           value={formData.name}
           onChange={handleChange}
         />
-        <Form.Input
+        {/* <Form.Input
           label="Cédula"
           placeholder="Cédula"
           name="identification"
           value={formData.identification}
           onChange={handleChange}
-        />
+        /> */}
         <Form.Input
           label="Años"
           placeholder="Años"
