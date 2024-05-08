@@ -1,6 +1,6 @@
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
-import HomePage from '../components/Home/HomePage'
+import HomePage from '../components/common/Home/HomePage'
 import DashboardAdd from '../components/common/Dashboard/DashboardAdd'
 import DashboardList from '../components/common/Dashboard/DashboardList'
 
