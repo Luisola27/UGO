@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AWSProjectType>Lambda</AWSProjectType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -12,23 +13,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="9.0.0" />
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer.Hosting" Version="1.7.0" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="GraphQL" Version="7.8.0" />
     <PackageReference Include="GraphQl.AspNetCore" Version="1.1.4" />
     <PackageReference Include="HotChocolate" Version="13.8.1" />
     <PackageReference Include="HotChocolate.AspNetCore" Version="13.8.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataConnection\DataConnection.csproj" />
+    <ProjectReference Include="..\UGO.DataAccess.Implementation\UGO.DataAccess.Implementation.csproj" />
+    <ProjectReference Include="..\ugo.DataAcces\UGO.DataAcces.csproj" />
+    <ProjectReference Include="..\UGO.Models\UGO.Models.csproj" />
+    <ProjectReference Include="..\UGO.Service.Implementation\UGO.Service.Implementation.csproj" />
+    <ProjectReference Include="..\UGO.Service\UGO.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

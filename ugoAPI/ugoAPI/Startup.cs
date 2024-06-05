@@ -1,7 +1,12 @@
 ﻿using DataConnection;
 using Microsoft.EntityFrameworkCore;
-using ugoAPI.GraphQL.GraphQLMutation;
-using ugoAPI.GraphQL.GraphQLQuery;
+using UGO.DataAcces;
+using UGO.DataAccess.Implementation;
+using UGO.Service;
+using UGO.Service.Implementation;
+using ugoAPI.GraphQL.UsersGraph.GraphQLSchema;
+using static ugoAPI.GraphQL.GraphQLMutation.NinoMutation;
+using static ugoAPI.GraphQL.UsersGraph.GraphQLSchema.AppQueryTest;
 
 namespace ugoAPI
 {
@@ -25,25 +30,30 @@ namespace ugoAPI
             });
 
             services.AddGraphQLServer()
-                .AddQueryType<NinoQueryObject>()
-                .AddMutationType<NinoMutationObject>()
-                ;
+                .AddQueryType<NinoQueryType>()
+                .AddMutationType<NinoMutationType>();
 
-            services.AddScoped((provider) =>
-            {
-                var db = provider.GetRequiredService<ContextDb>();
-                return new AppQuery(db);
-            });
+            services.AddScoped<NinoQueryType>();
 
-            services.AddScoped<AppMutation>();
+
+            services.AddScoped<IUserDataAccess, UserDataAccess>();
+            services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<INinoDataAccess, NinoDataAccess>();
+            services.AddScoped<INinoService, NinoService>();
+
+            services.AddScoped<NinoMutationType>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", builder =>
                 {
-                    builder.AllowAnyOrigin()
+                    builder.WithOrigins("http://localhost:5173")
                     .AllowAnyMethod()
-                    .AllowAnyHeader();
+                    .AllowAnyHeader()
+                    .AllowCredentials();
                 });
             });
 

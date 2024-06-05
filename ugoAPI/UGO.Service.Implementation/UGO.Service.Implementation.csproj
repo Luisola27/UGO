@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UGO.DataAccess.Implementation\UGO.DataAccess.Implementation.csproj" />
+    <ProjectReference Include="..\ugo.DataAcces\UGO.DataAcces.csproj" />
+    <ProjectReference Include="..\UGO.Models\UGO.Models.csproj" />
+    <ProjectReference Include="..\UGO.Service\UGO.Service.csproj" />
+  </ItemGroup>
+
+</Project>

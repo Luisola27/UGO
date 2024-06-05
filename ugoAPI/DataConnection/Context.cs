@@ -1,5 +1,5 @@
-﻿using DataConnection.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using UGO.Models;
 
 namespace DataConnection
 {
@@ -9,5 +9,6 @@ namespace DataConnection
 
         public virtual DbSet<Nino> Nino { get; set; }
 
+        public virtual DbSet<User> User { get; set; }
     }
 }
