@@ -1,9 +1,10 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Button, Checkbox, Form, Segment, Select } from "semantic-ui-react";
-import { Nino } from "../../../types/nino";
-import { getNinos, saveNino, updateNino } from "../../../helpers/nino/ninoHook";
+import { Nino } from "../../types/nino";
+import { getNinos, saveNino, updateNino } from "../../helpers/nino/ninoHook";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useNinos } from "../../../helpers/context/NinosContext";
+import { useNinos } from "../../helpers/context/NinosContext";
+import ValidateAuthentication from "../middlewares/validateAuthentication";
 
 const InitialFormData: Nino = {
   ninoId: 0,
@@ -15,7 +16,7 @@ const InitialFormData: Nino = {
   gift: 0,
 };
 
-export default function DashboardAdd() {
+function DashboardAdd() {
   const { setNinos } = useNinos();
   const [formData, setFormData] = useState<Nino>(InitialFormData);
   const [submitted, setSubmitted] = useState(false);
@@ -53,6 +54,8 @@ export default function DashboardAdd() {
       ...prevErrors,
       [name]: false,
     }));
+    console.log(event);
+    
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -103,6 +106,7 @@ export default function DashboardAdd() {
   };
 
   return (
+    <ValidateAuthentication>
     <Segment>
       <Form onSubmit={handleSubmit}>
         <Form.Input
@@ -174,5 +178,8 @@ export default function DashboardAdd() {
         ></Button>
       </Form>
     </Segment>
+    </ValidateAuthentication>
   );
 }
+
+export default DashboardAdd;

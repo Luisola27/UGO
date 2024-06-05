@@ -1,8 +1,8 @@
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 import App from '../App'
-import HomePage from '../components/common/Home/HomePage'
-import DashboardAdd from '../components/common/Dashboard/DashboardAdd'
-import DashboardList from '../components/common/Dashboard/DashboardList'
+import DashboardAdd from '../pages/Dashboard/DashboardAdd'
+import DashboardList from '../pages/Dashboard/DashboardList'
+import HomePage from '../pages/Home/HomePage'
 
 export const routes: RouteObject[] = 
 [
@@ -18,4 +18,4 @@ export const routes: RouteObject[] =
     }
 ]
 
-export const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(routes);

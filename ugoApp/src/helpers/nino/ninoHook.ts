@@ -2,6 +2,8 @@ import React from "react";
 import {
   DeleteNino,
   GetNinos,
+  GetNinosWithoutGift,
+  GetNinosWithoutSponsor,
   SaveNino,
   UpdateNino,
   UpdateSponsor,
@@ -116,4 +118,28 @@ export async function deleteNino(ninoId:number, name: string) {
       )
     }
   })  
+}
+
+export async function ninosWithoutGift(
+  setWithoutGift: React.Dispatch<React.SetStateAction<Array<Nino>>>
+) {
+  await GetNinosWithoutGift().then((response: any) => {
+    if(Object.keys(response).length > 0) {
+      if (response.data !== undefined && response.data.errors === undefined) {
+        setWithoutGift(response.data.data.getNinosMissingGift)
+      }
+    }
+  })
+}
+
+export async function ninosWithoutSponsor(
+  setWithoutSponsor: React.Dispatch<React.SetStateAction<Array<Nino>>>
+) {
+  await GetNinosWithoutSponsor().then((response: any) => {
+    if(Object.keys(response).length > 0) {
+      if (response.data !== undefined && response.data.errors === undefined) {
+        setWithoutSponsor(response.data.data.getNinosMissingSponsor)
+      }
+    }
+  })
 }

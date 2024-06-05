@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Grid,
   Modal,
@@ -8,8 +8,8 @@ import {
   Button,
   Icon,
 } from "semantic-ui-react";
-import { deleteNino, getNinos } from "../../../helpers/nino/ninoHook";
-import { useNinos } from "../../../helpers/context/NinosContext";
+import { deleteNino, getNinos } from "../../helpers/nino/ninoHook";
+import { useNinos } from "../../helpers/context/NinosContext";
 
 interface Props {
   ninoId: number;

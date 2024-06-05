@@ -1,6 +1,6 @@
 import axios, { AxiosResponse, CancelTokenSource } from "axios";
 import { Nino } from "../types/nino";
-import { GET_NINOS } from "./queries/ninoQueries";
+import { GET_NINOS, GET_NINOS_WITHOUT_GIFT, GET_NINOS_WITHOUT_SPONSOR} from "./queries/ninoQueries";
 import { GeneralCall } from "./generalServices";
 import {
   DELETE_NINO,
@@ -13,7 +13,9 @@ var sourceGetNinos: CancelTokenSource,
   sourceSaveNinos: CancelTokenSource,
   sourceUpdateSponsor: CancelTokenSource,
   sourceUpdateNino: CancelTokenSource,
-  sourceDeleteNino: CancelTokenSource;
+  sourceDeleteNino: CancelTokenSource,
+  sourceWithoutGift: CancelTokenSource,
+  sourceWithoutSponsor: CancelTokenSource;
 
 export async function GetNinos(): Promise<AxiosResponse<Array<Nino>>> {
   sourceGetNinos = axios.CancelToken.source();
@@ -77,6 +79,22 @@ export async function DeleteNino(ninoId: number) {
   return GeneralCall(query, sourceDeleteNino.token);
 }
 
+export async function GetNinosWithoutGift() {
+  sourceWithoutGift = axios.CancelToken.source();
+
+  const query = GET_NINOS_WITHOUT_GIFT();
+
+  return GeneralCall(query, sourceWithoutGift.token);
+}
+
+export async function GetNinosWithoutSponsor() {
+  sourceWithoutSponsor = axios.CancelToken.source();
+
+  const query = GET_NINOS_WITHOUT_SPONSOR();
+
+  return GeneralCall(query, sourceWithoutSponsor.token);
+}
+
 export function CancelNinoRequest(requestName: string) {
   switch (requestName) {
     case "GetNinos":
@@ -93,6 +111,12 @@ export function CancelNinoRequest(requestName: string) {
       break;
     case "DeleteNino":
       sourceDeleteNino?.cancel("Opration Canceled");
+      break;
+      case "GetNinosWithoutGift":
+        sourceWithoutGift?.cancel("Opration Canceled");
+      break;
+      case "GetNinosWithoutSponsor":
+        sourceWithoutSponsor?.cancel("Opration Canceled");
       break;
   }
 }

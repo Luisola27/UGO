@@ -15,8 +15,8 @@ import { getNinos } from "../../../helpers/nino/ninoHook";
 import { CancelNinoRequest } from "../../../services/ninoService";
 import { Nino } from "../../../types/nino";
 import { useNavigate } from "react-router-dom";
-import DeleteNino from "../Delete/DeleteNino";
 import CustomSearch from "../CustomSearch/CustomSearch";
+import DeleteNino from "../../../pages/Delete/DeleteNino";
 
 const filterOptions = [
   { key: "withSponsor", text: "Con Padrino", value: "withSponsor" },
