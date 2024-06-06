@@ -1,1 +1,94 @@
-﻿*.vsidx
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build output directories
+coverage/
+dist/
+dist-ssr
+
+# Temporary files and directories
+tmp/
+*.tmp
+*.sock
+
+# Local configuration files
+ugoAPI/.vs/
+
+# Environment files
+*.local
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tool-specific files
+.eslintcache
+*.iml
+
+# .NET specific files
+*.user
+*.rsuser
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.ide/
+*.ipch/
+*.aps
+*.rsp
+*.pdb
+
+# Ignore .NET build results
+ugoAPI/DataConnection/obj/
+ugoAPI/DataConnection/bin/
+ugoAPI/ugoAPI/obj/
+ugoAPI/ugoAPI/bin/
+
+
+# Ignore bin and obj directories
+**/bin/
+**/obj/
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore .NET runtime and build artifacts
+*.dll
+*.pdb
+*.exe
+*.cache
+*.suo
+*.json
+
+# Ignore .NETCore/MSBuild artifacts
+*.cache
+*.csproj.FileListAbsolute.txt
+*.assemblyinfo
+project.assets.json
+project.nuget.cache
+
+# Ignore .NET generated files
+*.EditorConfig
+*.GeneratedMSBuildEditorConfig.editorconfig
