@@ -23,7 +23,7 @@ tmp/
 
 # Local configuration files
 ugoAPI/.vs/
-
+*.vs
 # Environment files
 *.local
 .env
