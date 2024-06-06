@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "sylb+q7lBplN/ZfnRi06Nm5DSuiLsfwgmWp+dsKdOXK6rwXqmxBcjg/wLk4prJDJmeMqIJzJsjq0hBbr9hdpjA==",
-  "success": false,
+  "dgSpecHash": "m/HqvFvJqjdH5/e5oPilSPHqTx9F7j9yGMLC/8KlSVOhL46jmiICX/UOjHXtlnyh9oGFz3FgcWtbNZ/sOFif0w==",
+  "success": true,
   "projectFilePath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugoAPI\\ugoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luiso\\.nuget\\packages\\amazon.lambda.apigatewayevents\\2.7.0\\amazon.lambda.apigatewayevents.2.7.0.nupkg.sha512",
@@ -262,51 +262,5 @@
     "C:\\Users\\luiso\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\luiso\\.nuget\\packages\\yarp.reverseproxy\\2.0.1\\yarp.reverseproxy.2.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service.Implementation\\UGO.Service.Implementation.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service.Implementation\\UGO.Service.Implementation.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service\\UGO.Service.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service\\UGO.Service.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

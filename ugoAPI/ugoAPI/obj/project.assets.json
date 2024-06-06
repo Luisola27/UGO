@@ -4563,15 +4563,84 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Amazon.Lambda.AspNetCoreServer": "9.0.0",
-          "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1",
+          "UGO.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DataConnection.dll": {}
         },
         "runtime": {
           "bin/placeholder/DataConnection.dll": {}
+        }
+      },
+      "UGO.DataAcces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataConnection": "1.0.0",
+          "UGO.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UGO.DataAcces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UGO.DataAcces.dll": {}
+        }
+      },
+      "UGO.DataAccess.Implementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataConnection": "1.0.0",
+          "UGO.DataAcces": "1.0.0",
+          "UGO.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UGO.DataAccess.Implementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UGO.DataAccess.Implementation.dll": {}
+        }
+      },
+      "UGO.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/UGO.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UGO.Models.dll": {}
+        }
+      },
+      "UGO.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "UGO.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UGO.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UGO.Service.dll": {}
+        }
+      },
+      "UGO.Service.Implementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1",
+          "UGO.DataAcces": "1.0.0",
+          "UGO.DataAccess.Implementation": "1.0.0",
+          "UGO.Models": "1.0.0",
+          "UGO.Service": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UGO.Service.Implementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UGO.Service.Implementation.dll": {}
         }
       }
     }
@@ -11792,6 +11861,31 @@
       "type": "project",
       "path": "../DataConnection/DataConnection.csproj",
       "msbuildProject": "../DataConnection/DataConnection.csproj"
+    },
+    "UGO.DataAcces/1.0.0": {
+      "type": "project",
+      "path": "../ugo.DataAcces/UGO.DataAcces.csproj",
+      "msbuildProject": "../ugo.DataAcces/UGO.DataAcces.csproj"
+    },
+    "UGO.DataAccess.Implementation/1.0.0": {
+      "type": "project",
+      "path": "../UGO.DataAccess.Implementation/UGO.DataAccess.Implementation.csproj",
+      "msbuildProject": "../UGO.DataAccess.Implementation/UGO.DataAccess.Implementation.csproj"
+    },
+    "UGO.Models/1.0.0": {
+      "type": "project",
+      "path": "../UGO.Models/UGO.Models.csproj",
+      "msbuildProject": "../UGO.Models/UGO.Models.csproj"
+    },
+    "UGO.Service/1.0.0": {
+      "type": "project",
+      "path": "../UGO.Service/UGO.Service.csproj",
+      "msbuildProject": "../UGO.Service/UGO.Service.csproj"
+    },
+    "UGO.Service.Implementation/1.0.0": {
+      "type": "project",
+      "path": "../UGO.Service.Implementation/UGO.Service.Implementation.csproj",
+      "msbuildProject": "../UGO.Service.Implementation/UGO.Service.Implementation.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11799,11 +11893,6 @@
       "Amazon.Lambda.AspNetCoreServer >= 9.0.0",
       "Amazon.Lambda.AspNetCoreServer.Hosting >= 1.7.0",
       "AutoMapper >= 13.0.1",
-      "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj",
-      "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj",
-      "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service.Implementation\\UGO.Service.Implementation.csproj",
-      "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service\\UGO.Service.csproj",
-      "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj",
       "DataConnection >= 1.0.0",
       "GraphQL >= 7.8.0",
       "GraphQl.AspNetCore >= 1.1.4",
@@ -11811,7 +11900,12 @@
       "HotChocolate.AspNetCore >= 13.8.1",
       "Microsoft.EntityFrameworkCore >= 6.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.1",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.1"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.1",
+      "UGO.DataAcces >= 1.0.0",
+      "UGO.DataAccess.Implementation >= 1.0.0",
+      "UGO.Models >= 1.0.0",
+      "UGO.Service >= 1.0.0",
+      "UGO.Service.Implementation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11942,52 +12036,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service.Implementation\\UGO.Service.Implementation.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service.Implementation\\UGO.Service.Implementation.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service\\UGO.Service.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Service\\UGO.Service.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
