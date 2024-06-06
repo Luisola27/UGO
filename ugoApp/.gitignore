@@ -23,18 +23,44 @@ tmp/
 
 # Local configuration files
 ugoAPI/.vs/
-ugoAPI/.vs/
 
 # Environment files
 *.local
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Tool-specific files
+.eslintcache
+*.iml
+
+# .NET specific files
+*.user
+*.rsuser
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.ide/
+*.ipch/
+*.aps
+*.rsp
+*.pdb
+
+# Ignore .NET build results
+ugoAPI/DataConnection/obj/
+ugoAPI/DataConnection/bin/
+ugoAPI/ugoAPI/obj/
+ugoAPI/ugoAPI/bin/
