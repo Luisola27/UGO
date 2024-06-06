@@ -7,21 +7,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules/
 bower_components/
+
+# Build output directories
 coverage/
 dist/
+dist-ssr
 
-ugoAPI/.vs/
-
+# Temporary files and directories
 tmp/
-*.log
 *.tmp
 *.sock
+
+# Local configuration files
+ugoAPI/.vs/
 ugoAPI/.vs/
 
-dist
-dist-ssr
+# Environment files
 *.local
 
 # Editor directories and files
