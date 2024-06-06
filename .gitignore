@@ -37,7 +37,6 @@ Thumbs.db
 !.vscode/extensions.json
 .idea
 *.suo
-.suo
 *.ntvs*
 *.njsproj
 *.sln
@@ -66,7 +65,6 @@ ugoAPI/DataConnection/bin/
 ugoAPI/ugoAPI/obj/
 ugoAPI/ugoAPI/bin/
 
-
 # Ignore bin and obj directories
 **/bin/
 **/obj/
@@ -79,7 +77,6 @@ ugoAPI/ugoAPI/bin/
 *.pdb
 *.exe
 *.cache
-*.suo
 *.json
 
 # Ignore .NETCore/MSBuild artifacts
