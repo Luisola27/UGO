@@ -2,22 +2,30 @@ import React, { useEffect, useState } from "react";
 import { Container, Grid, Header, Segment, Icon } from "semantic-ui-react";
 import { useNinos } from "../../helpers/context/NinosContext";
 import { Nino } from "../../types/nino";
-import { ninosWithoutGift, ninosWithoutSponsor } from "../../helpers/nino/ninoHook";
+import {
+  getNinos,
+  ninosWithoutGift,
+  ninosWithoutSponsor,
+} from "../../helpers/nino/ninoHook";
 
-const SectionComponent: React.FC = () => {
-  const { ninos } = useNinos();
-  const [gift, setGift] = useState<Nino[]>([])
-  const [sponsor, setSponsor] = useState<Nino[]>([])
+const HomePage: React.FC = () => {
+  const { ninos, setNinos } = useNinos();
+  const [gift, setGift] = useState<Nino[]>([]);
+  const [sponsor, setSponsor] = useState<Nino[]>([]);
+
+  useEffect(() => {
+    getNinos(setNinos);
+  }, [setNinos]);
 
   useEffect(() => {
     ninosWithoutGift(setGift);
     ninosWithoutSponsor(setSponsor);
-  }, [])
+  }, []);
+  
 
   const ninosTotal = ninos.length;
   const giftMissing = gift.length;
   const sponsorMissing = sponsor.length;
-  
 
   return (
     <Container style={{ marginTop: "2em" }}>
@@ -42,9 +50,7 @@ const SectionComponent: React.FC = () => {
               <Header as="h1" style={{ marginBottom: "0.5em" }}>
                 {giftMissing}
               </Header>
-              <p style={{ fontSize: "1.1em" }}>
-                Regalos Faltantes
-              </p>
+              <p style={{ fontSize: "1.1em" }}>Regalos Faltantes</p>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -63,9 +69,7 @@ const SectionComponent: React.FC = () => {
               <Header as="h1" style={{ marginBottom: "0.5em" }}>
                 {ninosTotal}
               </Header>
-              <p style={{ fontSize: "1.1em" }}>
-                Total de Niños 
-              </p>
+              <p style={{ fontSize: "1.1em" }}>Total de Niños</p>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -84,9 +88,7 @@ const SectionComponent: React.FC = () => {
               <Header as="h1" style={{ marginBottom: "0.5em" }}>
                 {sponsorMissing}
               </Header>
-              <p style={{ fontSize: "1.1em" }}>
-                Niños sin Padrino
-              </p>
+              <p style={{ fontSize: "1.1em" }}>Niños sin Padrino</p>
             </Segment>
           </Grid.Column>
         </Grid.Row>
@@ -95,4 +97,4 @@ const SectionComponent: React.FC = () => {
   );
 };
 
-export default SectionComponent;
+export default HomePage;

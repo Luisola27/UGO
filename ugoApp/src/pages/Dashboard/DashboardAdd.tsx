@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Button, Checkbox, Form, Segment, Select } from "semantic-ui-react";
 import { Nino } from "../../types/nino";
 import { getNinos, saveNino, updateNino } from "../../helpers/nino/ninoHook";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useNinos } from "../../helpers/context/NinosContext";
-import ValidateAuthentication from "../middlewares/validateAuthentication";
 
 const InitialFormData: Nino = {
   ninoId: 0,
@@ -106,7 +106,6 @@ function DashboardAdd() {
   };
 
   return (
-    <ValidateAuthentication>
     <Segment>
       <Form onSubmit={handleSubmit}>
         <Form.Input
@@ -178,7 +177,6 @@ function DashboardAdd() {
         ></Button>
       </Form>
     </Segment>
-    </ValidateAuthentication>
   );
 }
 

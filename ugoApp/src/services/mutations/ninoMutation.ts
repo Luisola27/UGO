@@ -56,5 +56,5 @@ export const UPDATE_NINO = (ninoId: number, name?: string, identification?: stri
 
   export const DELETE_NINO = (ninoId: number) =>
     `mutation{
-      deleteNino(idNino: ${ninoId})
+      deleteNino(ninoId: ${ninoId})
     }`

@@ -1,0 +1,16 @@
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\bin\Debug\net6.0\DataConnection.deps.json
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\bin\Debug\net6.0\DataConnection.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\bin\Debug\net6.0\DataConnection.pdb
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\bin\Debug\net6.0\UGO.Models.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\bin\Debug\net6.0\UGO.Models.pdb
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.csproj.AssemblyReference.cache
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.AssemblyInfoInputs.cache
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.AssemblyInfo.cs
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.sourcelink.json
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConn.E0D5224B.Up2Date
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\refint\DataConnection.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\DataConnection.pdb
+C:\Desarrollo\Fork\UGO\ugoAPI\DataConnection\obj\Debug\net6.0\ref\DataConnection.dll

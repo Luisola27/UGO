@@ -4,13 +4,11 @@ import { Outlet } from 'react-router-dom';
 import { SemanticToastContainer } from 'react-semantic-toasts';
 import "react-semantic-toasts/styles/react-semantic-alert.css";
 import { NinosProvider } from './helpers/context/NinosContext';
-import Auth0ProviderWithHistory from './components/common/Auth0/auth0ProviderHistory';
 
 function App() {
   
   return (
     <NinosProvider>
-      <Auth0ProviderWithHistory>
     <div>
       <NavBar />
         <SemanticToastContainer position="bottom-right"/>
@@ -18,7 +16,6 @@ function App() {
         <Outlet />
       </Container>
     </div>
-    </Auth0ProviderWithHistory>
     </NinosProvider>
   )
 }

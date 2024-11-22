@@ -1,7 +1,6 @@
 import { Button, Container, Menu } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
 import { NavLink } from "react-router-dom";
-import Auth0AuthenticationButtons from "../Auth0/auth0Button";
 
 export default function NavBar() {
   return (
@@ -16,7 +15,6 @@ export default function NavBar() {
         </Menu.Item>
         <Menu.Item as={NavLink} to='/list' name="Lista de Niños"/>
         <Menu.Menu position="right">
-        <Auth0AuthenticationButtons />
         </Menu.Menu>
       </Container>
     </Menu>
