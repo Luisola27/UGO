@@ -1,0 +1,21 @@
+
+{
+    "region" : "eu-central-1",
+    "profile" : "lkiller",
+    "configuration" : "Release",
+    "framework"     : "net6.0",
+    "function-name" : "api-on-lambda-ugo",
+    "package-type"  : "Zip",
+    "function-handler" : "ugoAPI",
+    "function-memory-size" : 256,
+    "function-role"        : "arn:aws:iam::767397696433:role/api-on-lambda-ugo-role",
+    "function-timeout"     : 30,
+    "function-runtime"     : "dotnet6",
+    "function-architecture" : "x86_64",
+    "function-subnets"      : "",
+    "function-security-groups" : "",
+    "tracing-mode"             : "PassThrough",
+    "environment-variables"    : "\"ASPNETCORE_ENVIRONMENT\"=\"Development\"",
+    "image-tag"                : "",
+    "function-description"     : ""
+}

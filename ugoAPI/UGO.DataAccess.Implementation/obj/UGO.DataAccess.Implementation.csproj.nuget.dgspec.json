@@ -1,0 +1,283 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj": {}
+  },
+  "projects": {
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj",
+        "projectName": "DataConnection",
+        "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj",
+        "packagesPath": "C:\\Users\\luiso\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\luiso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Amazon.Lambda.AspNetCoreServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj",
+        "projectName": "UGO.DataAccess.Implementation",
+        "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\UGO.DataAccess.Implementation.csproj",
+        "packagesPath": "C:\\Users\\luiso\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.DataAccess.Implementation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\luiso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj": {
+                "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj"
+              },
+              "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj": {
+                "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj"
+              },
+              "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj",
+        "projectName": "UGO.DataAcces",
+        "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\UGO.DataAcces.csproj",
+        "packagesPath": "C:\\Users\\luiso\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\ugo.DataAcces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\luiso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj": {
+                "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\DataConnection\\DataConnection.csproj"
+              },
+              "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj",
+        "projectName": "UGO.Models",
+        "projectPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\UGO.Models.csproj",
+        "packagesPath": "C:\\Users\\luiso\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Fork\\UGO\\ugoAPI\\UGO.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\luiso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

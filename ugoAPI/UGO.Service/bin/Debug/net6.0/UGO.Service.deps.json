@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "UGO.Service/1.0.0": {
+        "dependencies": {
+          "UGO.Models": "1.0.0"
+        },
+        "runtime": {
+          "UGO.Service.dll": {}
+        }
+      },
+      "UGO.Models/1.0.0": {
+        "runtime": {
+          "UGO.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UGO.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UGO.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

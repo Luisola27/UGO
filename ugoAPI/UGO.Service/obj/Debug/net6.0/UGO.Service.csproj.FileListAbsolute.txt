@@ -1,0 +1,16 @@
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\bin\Debug\net6.0\UGO.Service.deps.json
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\bin\Debug\net6.0\UGO.Service.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\bin\Debug\net6.0\UGO.Service.pdb
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\bin\Debug\net6.0\UGO.Models.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\bin\Debug\net6.0\UGO.Models.pdb
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.csproj.AssemblyReference.cache
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.AssemblyInfoInputs.cache
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.AssemblyInfo.cs
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.sourcelink.json
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Serv.8FD9A35A.Up2Date
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\refint\UGO.Service.dll
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\UGO.Service.pdb
+C:\Desarrollo\Fork\UGO\ugoAPI\UGO.Service\obj\Debug\net6.0\ref\UGO.Service.dll

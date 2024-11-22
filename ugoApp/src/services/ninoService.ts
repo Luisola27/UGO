@@ -9,7 +9,7 @@ import {
   UPDATE_SPONSOR,
 } from "./mutations/ninoMutation";
 
-var sourceGetNinos: CancelTokenSource,
+let sourceGetNinos: CancelTokenSource,
   sourceSaveNinos: CancelTokenSource,
   sourceUpdateSponsor: CancelTokenSource,
   sourceUpdateNino: CancelTokenSource,

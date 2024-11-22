@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import {
   Button,
@@ -9,7 +10,6 @@ import {
   Segment,
 } from "semantic-ui-react";
 import "../../styles.css";
-
 import ModalAddSponsor from "../../components/common/Modal/ModalAddSponsor";
 import { useNinos } from "../../helpers/context/NinosContext";
 import { getNinos } from "../../helpers/nino/ninoHook";
@@ -17,7 +17,6 @@ import { CancelNinoRequest } from "../../services/ninoService";
 import { Nino } from "../../types/nino";
 import { useNavigate } from "react-router-dom";
 import DeleteNino from "../Delete/DeleteNino";
-import ValidateAuthentication from "../middlewares/validateAuthentication";
 
 export default function DashboardList() {
   const { ninos, setNinos } = useNinos();
@@ -49,59 +48,55 @@ export default function DashboardList() {
   );
 
   return (
-    <ValidateAuthentication>
-      <Grid>
-        <Grid.Column width="13">
-          <Segment>
-            <Item.Group color="blue" divided>
-              {filteredNinos.map((nino) => (
-                <Item key={nino.ninoId}>
-                  <Item.Content>
-                    <Item.Header as="a">{`${nino.name}`}</Item.Header>
-                    <Item.Description>
-                      <div>{`Años: ${nino.age}`}</div>
-                      <div>{nino.gender == 0 ? "Niño" : "Niña"}</div>
-                      <div>
-                        {nino.gift ? (
-                          <Icon name="gift" size="big" color="pink" />
-                        ) : (
-                          <div></div>
-                        )}
-                      </div>
-                    </Item.Description>
-                    <Item.Extra>
-                      <div
-                        style={{ position: "absolute", top: -100, right: 0 }}
-                      >
-                        <DeleteNino ninoId={nino.ninoId} nameNino={nino.name} />
-                      </div>
-                      <Button
-                        color="orange"
-                        floated="right"
-                        onClick={() => handleUpdate(nino)}
-                      >
-                        Actualizar
-                      </Button>
-                      {nino.sponsor === null ? (
-                        <ModalAddSponsor nino={nino} />
+    <Grid>
+      <Grid.Column width="13">
+        <Segment>
+          <Item.Group color="blue" divided>
+            {filteredNinos.map((nino) => (
+              <Item key={nino.ninoId}>
+                <Item.Content>
+                  <Item.Header as="a">{`${nino.name}`}</Item.Header>
+                  <Item.Description>
+                    <div>{`Años: ${nino.age}`}</div>
+                    <div>{nino.gender == 0 ? "Niño" : "Niña"}</div>
+                    <div>
+                      {nino.gift ? (
+                        <Icon name="gift" size="big" color="pink" />
                       ) : (
-                        <Label basic content={nino.sponsor} />
+                        <></>
                       )}
-                    </Item.Extra>
-                  </Item.Content>
-                </Item>
-              ))}
-            </Item.Group>
-          </Segment>
-        </Grid.Column>
-        <Grid.Column width="3">
-          <Search
-            placeholder="Buscar nombre niño..."
-            onSearchChange={handleSearchChange}
-            value={searchValue}
-          ></Search>
-        </Grid.Column>
-      </Grid>
-    </ValidateAuthentication>
+                    </div>
+                  </Item.Description>
+                  <Item.Extra>
+                    <div style={{ position: "absolute", top: -100, right: 0 }}>
+                      <DeleteNino ninoId={nino.ninoId} nameNino={nino.name} />
+                    </div>
+                    <Button
+                      color="orange"
+                      floated="right"
+                      onClick={() => handleUpdate(nino)}
+                    >
+                      Actualizar
+                    </Button>
+                    {nino.sponsor === null ? (
+                      <ModalAddSponsor nino={nino} />
+                    ) : (
+                      <Label basic content={nino.sponsor} />
+                    )}
+                  </Item.Extra>
+                </Item.Content>
+              </Item>
+            ))}
+          </Item.Group>
+        </Segment>
+      </Grid.Column>
+      <Grid.Column width="3">
+        <Search
+          placeholder="Buscar nombre niño..."
+          onSearchChange={handleSearchChange}
+          value={searchValue}
+        ></Search>
+      </Grid.Column>
+    </Grid>
   );
 }
