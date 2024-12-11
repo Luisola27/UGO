@@ -10,9 +10,6 @@ export default function NavBar() {
           <img src="assets\logo.png" style={{marginRight: "10px"}} />
           Una Gota
         </Menu.Item>
-        <Menu.Item>
-          <Button as={NavLink} to='/add' positive>Agregar niño</Button>
-        </Menu.Item>
         <Menu.Item as={NavLink} to='/list' name="Lista de Niños"/>
         <Menu.Menu position="right">
         </Menu.Menu>

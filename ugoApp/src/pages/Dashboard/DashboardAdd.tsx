@@ -12,7 +12,7 @@ const InitialFormData: Nino = {
   identification: "",
   age: 0,
   gender: 0,
-  sponsor: "" || null,
+  sponsor: null,
   gift: 0,
 };
 
@@ -37,8 +37,8 @@ function DashboardAdd() {
   }, [selectedNino]);
 
   const genderOptions = [
-    { key: "male", text: "Male", value: 0 },
-    { key: "female", text: "Female", value: 1 },
+    { key: "male", text: "Niño", value: 0 },
+    { key: "female", text: "Niña", value: 1 },
   ];
 
   const handleChange = (
@@ -54,8 +54,6 @@ function DashboardAdd() {
       ...prevErrors,
       [name]: false,
     }));
-    console.log(event);
-    
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -63,10 +61,7 @@ function DashboardAdd() {
 
     setSubmitted(true);
 
-    let newErrors = {
-      name: false,
-      age: false,
-    };
+    let newErrors = { name: false, age: false };
 
     if (formData.name.trim() === "") {
       newErrors = {
@@ -121,13 +116,6 @@ function DashboardAdd() {
           value={formData.name}
           onChange={handleChange}
         />
-        {/* <Form.Input
-          label="Cédula"
-          placeholder="Cédula"
-          name="identification"
-          value={formData.identification}
-          onChange={handleChange}
-        /> */}
         <Form.Input
           label="Años"
           placeholder="Años"
@@ -151,7 +139,7 @@ function DashboardAdd() {
           label="Padrino"
           placeholder="Padrino"
           name="sponsor"
-          value={formData.sponsor}
+          value={formData.sponsor || ""}
           onChange={handleChange}
         />
         <Form.Field>

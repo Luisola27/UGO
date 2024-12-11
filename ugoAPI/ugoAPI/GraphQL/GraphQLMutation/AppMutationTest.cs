@@ -9,7 +9,7 @@ namespace ugoAPI.GraphQL.GraphQLMutation
     {
         public static async Task<Nino> SaveNinoResolverAsync(NinoInput input, [Service] INinoService ninoService)
         {
-            return await ninoService.SaveNinoAsync(input.Name, input.Identification, input.Age, input.Gender);
+            return await ninoService.SaveNinoAsync(input.Name, input.Identification, input.Age, input.Gender, input.Gift, input.Sponsor);
         }
         public static async Task<bool> DeleteNinoAsync(IResolverContext context, [Service] INinoService ninoService)
         {
@@ -22,11 +22,10 @@ namespace ugoAPI.GraphQL.GraphQLMutation
             protected override void Configure(IObjectTypeDescriptor descriptor)
             {
                 descriptor.Field("saveNino")
-                    .Argument("ninoId", a => a.Type<NonNullType<NinoInputType>>())
+                    .Argument("input", a => a.Type<NonNullType<NinoInputType>>())
                     .Resolve(ctx =>
                         SaveNinoResolverAsync(ctx.ArgumentValue<NinoInput>("input"),
-                        ctx.Service<INinoService>())
-                    )
+                        ctx.Service<INinoService>()))
                     .Type<NinoType>();
 
                 descriptor.Field("deleteNino")

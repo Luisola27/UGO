@@ -3,7 +3,7 @@
     public class NinoInput
     {
         public int NinoId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public string? Identification { get; set; }
         public int Age { get; set; }
         public int Gender { get; set; }
